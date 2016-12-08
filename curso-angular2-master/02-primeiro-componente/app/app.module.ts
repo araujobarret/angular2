@@ -8,8 +8,8 @@ import { MeuPrimeiroComponent } from './primeiro/meu-primeiro.component';
 import { CursosModule } from './cursos/cursos.module';
 
 @NgModule({
-    imports: [ BrowserModule, CursosModule ],
-    declarations: [ AppComponent, MeuPrimeiroComponent ],
-    bootstrap: [ AppComponent ]
+  imports:      [ BrowserModule ],
+  declarations: [ AppComponent, MeuPrimeiroComponent, CursosModule ],
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
