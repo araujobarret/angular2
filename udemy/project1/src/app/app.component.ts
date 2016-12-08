@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   template:`
     <h2>app works!</h2>
     <app-another></app-another>
-    <app-sibling-component>Loading...</app-sibling-component>
+    <app-sibling-component>
+      <div>Samara Sewing's Website</div>
+    </app-sibling-component>
   `
 })
 export class AppComponent {

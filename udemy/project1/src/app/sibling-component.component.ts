@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-sibling-component',
   template:`
     <p>Sibling works!</p>
+    <ng-content></ng-content>
   `
 })
 export class SiblingComponentComponent{
