@@ -5,8 +5,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
   template:`
     <h2>app works!</h2>
-    <app-databiding></app-databiding>
+    <app-lifecycle *ngIf="!delete"></app-lifecycle>
+    <button (click)="delete = true">Delete</button>
   `
 })
 export class AppComponent {
+  delete = false;
 }
