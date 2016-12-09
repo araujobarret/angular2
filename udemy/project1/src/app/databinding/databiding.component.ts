@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 export class DatabidingComponent {
   stringInterpolation = 'This is a string interpolation.';
   numberInterpolation = 2;
+
+  onClicked(value: string){
+    alert(value);
+  }
 }
