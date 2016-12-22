@@ -8,6 +8,7 @@ import { DatabidingComponent } from './databinding/databiding.component';
 import { PropertyBindingComponent } from './databinding/property-binding.component';
 import { EventBindingComponent } from './databinding/event-binding.component';
 import { LifecycleComponent } from './lifecycle.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { LifecycleComponent } from './lifecycle.component';
     PropertyBindingComponent,
     EventBindingComponent,
     LifecycleComponent,
+    ShoppingListComponent,
   ],
   imports: [
     BrowserModule,
