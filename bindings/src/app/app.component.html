@@ -1,50 +1,76 @@
+<!--<section>-->
+  <!--<article>-->
+    <!--<h3>Class and style binding</h3>-->
+    <!--<div>-->
+      <!--Selecione uma classe:-->
+      <!--<select #change (change)="0">-->
+        <!--<option value="alert-success">Success</option>-->
+        <!--<option value="alert-info">Info</option>-->
+        <!--<option value="alert-warning">Warning</option>-->
+        <!--<option value="alert-danger">danger</option>-->
+      <!--</select>-->
+      <!--<br><br>-->
+      <!--<div class="alert" [class.alert-success]="change.value == 'alert-success'">-->
+        <!--Success-->
+      <!--</div>-->
+      <!--<div class="alert" [class.alert-info]="change.value == 'alert-info'">-->
+        <!--Info-->
+      <!--</div>-->
+      <!--<div class="alert" [class.alert-warning]="change.value == 'alert-warning'">-->
+        <!--Warning-->
+      <!--</div>-->
+      <!--<div class="alert" [class.alert-danger]="change.value == 'alert-danger'">-->
+        <!--Error-->
+      <!--</div>-->
+
+      <!--<div class="alert alert-danger" [style.display]="change.value == 'alert-danger' ? 'block': 'none'">-->
+        <!--Something to show when error selected.-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</article>-->
+<!--</section>-->
+<!--<br>-->
+<!--<section class="event-binding">-->
+  <!--<article>-->
+    <!--<h3>Event Biding</h3>-->
+    <!--<div>-->
+      <!--<button (click)="onClick()">Click me</button>-->
+      <!--<br><br>-->
+      <!--<input #btn type="text" (keyup)="onKeyUp($event)"-->
+      <!--(keyup.enter)="onSave(btn.value)"/>-->
+
+      <!--<div>Content: {{content}} </div>-->
+      <!--<div>Saved content: {{savedContent}} </div>-->
+      <!--<br>-->
+      <!--<span (mouseover)="onMouseOver()" (mouseout)="onMouseOver()" [class.highlight]="isMouseOver">-->
+        <!--Pass the mouse over.-->
+      <!--</span>-->
+    <!--</div>-->
+  <!--</article>-->
+<!--</section>-->
+<!--<section>-->
+  <!--<article class="two-way-databinding">-->
+    <!--<div>-->
+      <!--<h3>Two-way databinding</h3>-->
+
+      <!--<input type="text" [value]="name" (input)="name=$event.target.value"/>-->
+      <!--<input type="text" [ngModel]="name" (ngModelChange)="name=$event"/>-->
+      <!--<input type="text" [ngModel]="name" [(ngModel)]="name"/>-->
+
+      <!--<p>You typed the name: {{ name }}</p>-->
+      <!--<br><br>-->
+      <!--<div>-->
+        <!--My name is {{person.name}} and i am {{person.age}} years old.-->
+        <!--<input type="text" [(ngModel)]="person.name"/>-->
+        <!--<input type="text" [(ngModel)]="person.age"/>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</article>-->
+<!--</section>-->
+
 <section>
   <article>
-    <h3>Class and style binding</h3>
-    <div>
-      Selecione uma classe:
-      <select #change (change)="0">
-        <option value="alert-success">Success</option>
-        <option value="alert-info">Info</option>
-        <option value="alert-warning">Warning</option>
-        <option value="alert-danger">danger</option>
-      </select>
-      <br><br>
-      <div class="alert" [class.alert-success]="change.value == 'alert-success'">
-        Success
-      </div>
-      <div class="alert" [class.alert-info]="change.value == 'alert-info'">
-        Info
-      </div>
-      <div class="alert" [class.alert-warning]="change.value == 'alert-warning'">
-        Warning
-      </div>
-      <div class="alert" [class.alert-danger]="change.value == 'alert-danger'">
-        Error
-      </div>
-
-      <div class="alert alert-danger" [style.display]="change.value == 'alert-danger' ? 'block': 'none'">
-        Something to show when error selected.
-      </div>
-    </div>
-  </article>
-</section>
-<br>
-<section class="event-binding">
-  <article>
-    <h3>Event Biding</h3>
-    <div>
-      <button (click)="onClick()">Click me</button>
-      <br><br>
-      <input #btn type="text" (keyup)="onKeyUp($event)"
-      (keyup.enter)="onSave(btn.value)"/>
-
-      <div>Content: {{content}} </div>
-      <div>Saved content: {{savedContent}} </div>
-      <br>
-      <span (mouseover)="onMouseOver()" (mouseout)="onMouseOver()" [class.highlight]="isMouseOver">
-        Pass the mouse over.
-      </span>
-    </div>
+    <h3>Input/Output properties</h3>
+    <app-course course="Angular2"></app-course>
   </article>
 </section>

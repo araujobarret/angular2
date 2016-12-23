@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,7 +17,8 @@ export class AppComponent {
   content : string = '';
   savedContent :  string = '';
   isMouseOver : boolean = false;
-
+  name : string = '';
+  person = {name : '', age : 15}
   onClick(){
     alert("Button clicked!");
   }
