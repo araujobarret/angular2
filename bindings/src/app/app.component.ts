@@ -36,4 +36,8 @@ export class AppComponent {
     this.isMouseOver = !this.isMouseOver;
   }
 
+  onValueChange(event){
+    console.log(event);
+  }
+
 }
