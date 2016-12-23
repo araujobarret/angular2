@@ -3,8 +3,35 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styles: [
+    `
+      .highlight {
+        background-color: yellow;
+        font-weight: bold;
+      }
+    `
+  ]
 })
 export class AppComponent {
-  title = 'app works!';
+  content : string = '';
+  savedContent :  string = '';
+  isMouseOver : boolean = false;
+
+  onClick(){
+    alert("Button clicked!");
+  }
+
+  onKeyUp(event : any){
+    console.log(event);
+    this.content = event.target.value;
+  }
+
+  onSave(saved : string){
+    this.savedContent = saved;
+  }
+
+  onMouseOver(){
+    this.isMouseOver = !this.isMouseOver;
+  }
+
 }

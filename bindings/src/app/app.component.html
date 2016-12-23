@@ -1,29 +1,50 @@
-<article>
-  <h3>Class and style binding</h3>
-  <div>
-    Selecione uma classe:
-    <select #change (change)="0">
-      <option value="alert-success">Success</option>
-      <option value="alert-info">Info</option>
-      <option value="alert-warning">Warning</option>
-      <option value="alert-danger">danger</option>
-    </select>
-    <br><br>
-    <div class="alert" [class.alert-success]="change.value == 'alert-success'">
-      Success
-    </div>
-    <div class="alert" [class.alert-info]="change.value == 'alert-info'">
-      Info
-    </div>
-    <div class="alert" [class.alert-warning]="change.value == 'alert-warning'">
-      Warning
-    </div>
-    <div class="alert" [class.alert-danger]="change.value == 'alert-danger'">
-      Error
-    </div>
+<section>
+  <article>
+    <h3>Class and style binding</h3>
+    <div>
+      Selecione uma classe:
+      <select #change (change)="0">
+        <option value="alert-success">Success</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-warning">Warning</option>
+        <option value="alert-danger">danger</option>
+      </select>
+      <br><br>
+      <div class="alert" [class.alert-success]="change.value == 'alert-success'">
+        Success
+      </div>
+      <div class="alert" [class.alert-info]="change.value == 'alert-info'">
+        Info
+      </div>
+      <div class="alert" [class.alert-warning]="change.value == 'alert-warning'">
+        Warning
+      </div>
+      <div class="alert" [class.alert-danger]="change.value == 'alert-danger'">
+        Error
+      </div>
 
-    <div class="alert alert-danger" [style.display]="change.value == 'alert-danger' ? 'block': 'none'">
-      Something to show when error selected.
+      <div class="alert alert-danger" [style.display]="change.value == 'alert-danger' ? 'block': 'none'">
+        Something to show when error selected.
+      </div>
     </div>
-  </div>
-</article>
+  </article>
+</section>
+<br>
+<section class="event-binding">
+  <article>
+    <h3>Event Biding</h3>
+    <div>
+      <button (click)="onClick()">Click me</button>
+      <br><br>
+      <input #btn type="text" (keyup)="onKeyUp($event)"
+      (keyup.enter)="onSave(btn.value)"/>
+
+      <div>Content: {{content}} </div>
+      <div>Saved content: {{savedContent}} </div>
+      <br>
+      <span (mouseover)="onMouseOver()" (mouseout)="onMouseOver()" [class.highlight]="isMouseOver">
+        Pass the mouse over.
+      </span>
+    </div>
+  </article>
+</section>
