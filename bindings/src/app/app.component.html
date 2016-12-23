@@ -21,5 +21,9 @@
     <div class="alert" [class.alert-danger]="change.value == 'alert-danger'">
       Error
     </div>
+
+    <div class="alert alert-danger" [style.display]="change.value == 'alert-danger' ? 'block': 'none'">
+      Something to show when error selected.
+    </div>
   </div>
 </article>
