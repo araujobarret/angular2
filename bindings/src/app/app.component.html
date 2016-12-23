@@ -1,0 +1,25 @@
+<article>
+  <h3>Class and style binding</h3>
+  <div>
+    Selecione uma classe:
+    <select #change (change)="0">
+      <option value="alert-success">Success</option>
+      <option value="alert-info">Info</option>
+      <option value="alert-warning">Warning</option>
+      <option value="alert-danger">danger</option>
+    </select>
+    <br><br>
+    <div class="alert" [class.alert-success]="change.value == 'alert-success'">
+      Success
+    </div>
+    <div class="alert" [class.alert-info]="change.value == 'alert-info'">
+      Info
+    </div>
+    <div class="alert" [class.alert-warning]="change.value == 'alert-warning'">
+      Warning
+    </div>
+    <div class="alert" [class.alert-danger]="change.value == 'alert-danger'">
+      Error
+    </div>
+  </div>
+</article>
