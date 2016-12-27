@@ -14,3 +14,11 @@
 
 <br>
 <button (click)="onShowCourses()">Show or hide courses</button>
+
+<br>
+<div [hidden]="!showCourses">
+  List of courses here.
+</div>
+<div [hidden]="showCourses">
+  No courses to de shown.
+</div>
