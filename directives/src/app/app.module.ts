@@ -3,13 +3,16 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+
 import { AppComponent } from './app.component';
 import { DirectiveNgifComponent } from './directive-ngif/directive-ngif.component';
+import { DirectiveNgswitchComponent } from './directive-ngswitch/directive-ngswitch.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DirectiveNgifComponent
+    DirectiveNgifComponent,
+    DirectiveNgswitchComponent
   ],
   imports: [
     BrowserModule,
