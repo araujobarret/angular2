@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectiveNgswitchComponent implements OnInit {
 
+  aba: string;
+
   constructor() { }
 
   ngOnInit() {
