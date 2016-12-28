@@ -1,7 +1,7 @@
 <h5>Ngfor directive</h5>
 
 <ul>
-  <li *ngFor="let course of courses">{{course}}</li>
+  <li *ngFor="let course of courses, let i = index">{{i+1}} - {{course}}</li>
 </ul>
 
 
