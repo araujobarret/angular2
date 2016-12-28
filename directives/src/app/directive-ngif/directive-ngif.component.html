@@ -22,3 +22,14 @@
 <div [hidden]="showCourses">
   No courses to de shown.
 </div>
+
+<br><br>
+
+<h2>Removing the * and using template</h2>
+<div *ngIf="showCourses">
+  List of courses here.
+</div>
+
+<template [ngIf]="showCourses">
+  <div>List of courses here.</div>
+</template>
