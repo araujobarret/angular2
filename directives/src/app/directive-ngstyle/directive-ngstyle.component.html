@@ -1,0 +1,10 @@
+<h5>Styles with property binding (style binding)</h5>
+
+<button
+  [style.backgroundColor]="active ? 'blue' : 'gray'"
+  [style.color]="active ? 'white': 'black'"
+  [style.fontWeight]="active ? 'bold': 'normal'"
+  [style.fontSize]="fontSize + 'px'"
+  (click)="onClick()">
+  Change attribute active
+</button>
