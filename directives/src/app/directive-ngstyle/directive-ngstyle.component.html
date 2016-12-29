@@ -10,3 +10,16 @@
 </button>
 <br>
 <input type="text" [value]="fontSize" (keyup)="onChange($event)"/>
+<br>
+
+<h5>Styles with ngStyle</h5>
+<button
+  [ngStyle]="{
+    'backgroundColor': active ? 'blue' : 'gray',
+    'color': active ? 'white': 'black',
+    'fontWeight': active ? 'bold': 'normal',
+    'fontSize': fontSize+'px'
+  }"
+  (click)="onClick()">
+  Change attribute active
+</button>
