@@ -1,0 +1,4 @@
+<p>Description: {{task.desc}}</p>
+<!--<p>Responsible: {{task.ressponsible != null ? task.responsible.name: ''}}</p>-->
+<p>Responsible: {{task.responsible?.name}}</p>
+<p>Responsible: {{task.responsible?.user?.name}}</p>
