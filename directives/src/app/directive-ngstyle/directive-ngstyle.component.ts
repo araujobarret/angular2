@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-directive-ngstyle',
@@ -17,5 +17,10 @@ export class DirectiveNgstyleComponent implements OnInit {
 
   onClick(){
     this.active = !this.active;
+  }
+
+  onChange(event: any){
+    this.fontSize = event.target.value;
+    console.log(this.fontSize);
   }
 }
