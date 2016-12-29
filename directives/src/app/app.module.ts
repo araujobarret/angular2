@@ -13,6 +13,8 @@ import { DirectiveNgclassComponent } from './directive-ngclass/directive-ngclass
 import { DirectiveNgstyleComponent } from './directive-ngstyle/directive-ngstyle.component';
 import { DirectiveElvisComponent } from './directive-elvis/directive-elvis.component';
 import { DirectiveNgcontentComponent } from './directive-ngcontent/directive-ngcontent.component';
+import { BackgroundYellowDirective } from './shared/background-yellow.directive';
+import { DirectiveCustomComponent } from './directive-custom/directive-custom.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { DirectiveNgcontentComponent } from './directive-ngcontent/directive-ngc
     DirectiveNgclassComponent,
     DirectiveNgstyleComponent,
     DirectiveElvisComponent,
-    DirectiveNgcontentComponent
+    DirectiveNgcontentComponent,
+    BackgroundYellowDirective,
+    DirectiveCustomComponent
   ],
   imports: [
     BrowserModule,
