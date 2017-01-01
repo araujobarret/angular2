@@ -6,7 +6,7 @@ import { Directive, HostListener, HostBinding, ElementRef, Renderer, Input, OnIn
 export class HighlightFullDirective {
 
   @Input() defaultColor: string = 'white';
-  @Input() highlightColor: string = 'yellow';
+  @Input('appHighlightFull') highlightColor: string = 'yellow';
 
   @HostBinding('style.backgroundColor') backgroundColor: string;
 
