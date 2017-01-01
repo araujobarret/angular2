@@ -1,7 +1,7 @@
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[appBackgroundYellow]'
+  selector: 'p[appBackgroundYellow]'
 })
 export class BackgroundYellowDirective {
 

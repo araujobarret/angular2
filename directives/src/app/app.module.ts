@@ -15,6 +15,7 @@ import { DirectiveElvisComponent } from './directive-elvis/directive-elvis.compo
 import { DirectiveNgcontentComponent } from './directive-ngcontent/directive-ngcontent.component';
 import { BackgroundYellowDirective } from './shared/background-yellow.directive';
 import { DirectiveCustomComponent } from './directive-custom/directive-custom.component';
+import { HighlightDirective } from './shared/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DirectiveCustomComponent } from './directive-custom/directive-custom.co
     DirectiveElvisComponent,
     DirectiveNgcontentComponent,
     BackgroundYellowDirective,
-    DirectiveCustomComponent
+    DirectiveCustomComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
