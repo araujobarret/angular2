@@ -1,9 +1,22 @@
-import { Directive, HostListener, HostBinding, ElementRef, Renderer, Input } from '@angular/core';
+import { Directive, HostListener, HostBinding, ElementRef, Renderer, Input, OnInit } from '@angular/core';
 
 @Directive({
   selector: '[appHighlightFull]'
 })
 export class HighlightFullDirective {
+
+  @Input() defaultColor: string = 'white';
+  @Input() highlightColor: string = 'yellow';
+
+  @HostBinding('style.backgroundColor') backgroundColor: string;
+
+  constructor(private element: ElementRef, private renderer: Renderer) {  }
+
+  ngOnInit(){
+    this.backgroundColor = this.defaultColor;
+    console.log("onInit");
+  }
+
   @HostListener('mouseenter') onMouseOver(){
     this.backgroundColor = this.highlightColor;
   }
@@ -12,11 +25,5 @@ export class HighlightFullDirective {
     this.backgroundColor = this.defaultColor;
   }
 
-  @HostBinding('style.backgroundColor') backgroundColor: string;
-
-  constructor(private element: ElementRef, private renderer: Renderer) {  }
-
-  @Input() defaultColor: string = 'white';
-  @Input() highlightColor: string = 'yellow';
 
 }
