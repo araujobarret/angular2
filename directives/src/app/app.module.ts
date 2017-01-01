@@ -16,6 +16,7 @@ import { DirectiveNgcontentComponent } from './directive-ngcontent/directive-ngc
 import { BackgroundYellowDirective } from './shared/background-yellow.directive';
 import { DirectiveCustomComponent } from './directive-custom/directive-custom.component';
 import { HighlightDirective } from './shared/highlight.directive';
+import { HighlightFullDirective } from './shared/highlight-full.directive';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HighlightDirective } from './shared/highlight.directive';
     DirectiveNgcontentComponent,
     BackgroundYellowDirective,
     DirectiveCustomComponent,
-    HighlightDirective
+    HighlightDirective,
+    HighlightFullDirective
   ],
   imports: [
     BrowserModule,
