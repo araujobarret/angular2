@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectiveNgifComponent implements OnInit {
 
+  //numbers: number[] = [1, 2, 3, 4, 5];
+
   courses: string[] = ['Angular 2'];
   showCourses:boolean = false;
 

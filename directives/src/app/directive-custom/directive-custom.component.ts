@@ -7,6 +7,8 @@ import { Component, ElementRef, Renderer } from '@angular/core';
 })
 export class DirectiveCustomComponent {
 
+  showCourses: boolean = false;
+
   constructor(private element: ElementRef, private renderer:Renderer) {
     //this.element.nativeElement.style.backgroundColor = "yellow";
     this.renderer.setElementStyle(this.element.nativeElement,
