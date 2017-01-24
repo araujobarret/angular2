@@ -1,8 +1,8 @@
 <div>
-  <input type="text" />
-  <button (click)="onLog()">Log</button>
-  <button (click)="onStore()">Store</button>
-  <button (click)="onSend()">Send</button>
+  <input type="text" #input/>
+  <button (click)="onLog(input.value)">Log</button>
+  <button (click)="onStore(input.value)">Store</button>
+  <button (click)="onSend(input.value)">Send</button>
 </div>
 <hr/>
 <div>
