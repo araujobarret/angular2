@@ -6,10 +6,10 @@
 </div>
 <hr/>
 <div>
-  <button (click)="onRefresh()">Refresh Storage</button>
+  <button (click)="onGet()">Refresh Storage</button>
   <h3>Storage</h3>
   <ul>
-    <li></li>
+    <li *ngFor="let item of items">{{item}}</li>
   </ul>
   <h3>Received Value</h3>
   <p>{{value}}</p>
