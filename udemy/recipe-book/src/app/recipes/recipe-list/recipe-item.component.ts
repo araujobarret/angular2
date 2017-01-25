@@ -4,7 +4,8 @@ import { Recipe } from '../recipe';
 
 @Component({
   selector: 'rb-list-item',
-  templateUrl: './recipe-item.component.html'
+  templateUrl: './recipe-item.component.html',
+  styleUrls: ['./recipe-item.css']
 })
 export class ListItemComponent implements OnInit {
 
