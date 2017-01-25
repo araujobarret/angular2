@@ -6,7 +6,7 @@ import {DataService} from "./data.service";
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [LogService, DataService]
+  providers: [DataService]
 })
 export class AppComponent {
   value  = '';
@@ -22,7 +22,7 @@ export class AppComponent {
   }
 
   onGet(){
-    this.items = this.dataService.getData();
+    this.items = this.dataService.getData().slice(0);
   }
 
 }
