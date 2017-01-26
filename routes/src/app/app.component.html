@@ -3,9 +3,9 @@
     <div class="col-xs-10">
       <h1>Hello World!</h1>
       <hr />
-      <a [routerLink]="['']" [queryParams]="{that: 2000}">Home</a> |
+      <a [routerLink]="['']" [queryParams]="{that: 2000}" routerLinkActive="active">Home</a> |
       <input type="text" #id (input)="0" />
-      <a [routerLink]="['user', id.value]">User</a>
+      <a [routerLink]="['user', id.value]" routerLinkActive="active">User</a>
       <hr />
       <router-outlet></router-outlet>
     </div>
