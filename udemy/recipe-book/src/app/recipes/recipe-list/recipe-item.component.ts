@@ -10,7 +10,7 @@ import { Recipe } from '../recipe';
 export class ListItemComponent implements OnInit {
 
   @Input() recipe: Recipe;
-  recipeId: number;
+  @Input() recipeId: number;
 
   constructor() { }
 
