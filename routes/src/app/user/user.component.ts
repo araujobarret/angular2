@@ -1,19 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import {Router} from "@angular/router";
+import { Component, OnDestroy } from '@angular/core';
+import {Router, ActivatedRoute} from "@angular/router";
+import {Subscription} from "rxjs";
 
 @Component({
   selector: 'app-user',
   template:`
     <h1>User Component</h1>
-    <a [routerLink]="['../']">User</a>
     <button (click)="onNavigate()">Go home</button>
+    {{id}}
   `
 })
-export class UserComponent implements OnInit {
+export class UserComponent implements OnDestroy {
+  private subscription: Subscription;
 
-  constructor(private router: Router) { }
+  id: string;
 
-  ngOnInit() {
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) {
+    this.subscription = activatedRoute.params.subscribe(
+      (param: any) => this.id = param['id']
+    );
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
   onNavigate() {
