@@ -24,9 +24,10 @@ export class DataDrivenComponent implements OnInit {
     //     new FormControl('Cooking', Validators.required)
     //   ])
     // });
+
     this.form = formBuilder.group({
       'userData': formBuilder.group({
-        'username': ['Max', Validators.required],
+        'username': ['Max', [Validators.required, this.exampleValidator]],
         'email': ['', [Validators.required, Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")]]
       }),
       'password': ['', Validators.required],
@@ -46,6 +47,13 @@ export class DataDrivenComponent implements OnInit {
 
   onSubmit(){
     console.log(this.form);
+  }
+
+  exampleValidator(control: FormControl): {[s:string]:boolean} {
+    if(control.value === 'Example'){
+      return {example: true};
+    }
+    return null;
   }
 
 }
