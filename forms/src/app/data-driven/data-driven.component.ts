@@ -37,6 +37,10 @@ export class DataDrivenComponent implements OnInit {
         ['Cooking', Validators.required, this.asyncExampleValidator]
       ])
     });
+
+    this.form.valueChanges.subscribe(
+      (data: any) => console.log("ValueChanges: " + data)
+    );
   }
 
   onAddHobby() {
