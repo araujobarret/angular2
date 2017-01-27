@@ -13,6 +13,7 @@
         class="form-control"
         id="email"
         formControlName="email">
+      <div *ngIf="!form.controls['email'].valid">Invalid Email</div>
     </div>
   </div>
 
@@ -27,5 +28,5 @@
   </div>
 
   <button type="submit" class="btn btn-default">Add Hobby</button>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Submit</button>
 </form>
