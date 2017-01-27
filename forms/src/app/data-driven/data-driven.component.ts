@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FormGroup, FormControl, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-data-driven',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class DataDrivenComponent implements OnInit {
+  // (<FormArray>form.controls['']).push(new FormControl('', asdsadas, asdsa);
+  form: FormGroup;
 
-  constructor() { }
+  constructor() {
+    this.form = new FormGroup({
+      'username': new FormControl('Max', Validators.required),
+      'email': new FormControl('', Validators.required),
+      'password': new FormControl('', Validators.required)
+    });
+  }
 
   ngOnInit() {
+  }
+
+  onSubmit(){
+    console.log(this.form);
   }
 
 }

@@ -2,11 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template:
-  `
-    <app-template-driven></app-template-driven>   
-  `
+  templateUrl: 'forms.component.html'
 })
 export class AppComponent {
-  title = 'app works!';
 }
