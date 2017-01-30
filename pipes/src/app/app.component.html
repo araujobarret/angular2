@@ -4,4 +4,13 @@
   <p>{{myValue | uppercase}}</p>
   <p>{{myDate | date:"dd/MM/yyyy"}}</p>
   <p>{{myValue | slice:2:4 | uppercase}}</p>
+  <h2>Custom</h2>
+  <input type="text" #input (keyup)="0">
+  <p *ngIf="input.value!=0">{{input.value | double}}</p>
+  <hr>
+  <input type="text" #newItem>
+  <button (click)="values.push(newItem.value)">Add Item</button>
+  <ul>
+    <li *ngFor="let i of values | filter:'k'" >{{ i }}</li>
+  </ul>
 </div>
