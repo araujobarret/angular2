@@ -14,4 +14,7 @@ export class AppComponent {
   myValue: string = "lowercase";
   myDate = new Date(2017, 1, 30);
   values = ['Meat', 'Chicken', 'Pork'];
+  asyncValue = new Promise((resolve, reject) =>{
+    setTimeout(()=> resolve('Data is here'), 2000);
+  });
 }
