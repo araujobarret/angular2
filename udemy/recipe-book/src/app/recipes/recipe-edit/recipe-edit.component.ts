@@ -31,10 +31,7 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
         recipeIngredients.push(
           new FormGroup({
             name: new FormControl(this.recipe.ingredients[i].name, Validators.required),
-            amount: new FormControl(this.recipe.ingredients[i].amount, [
-              Validators.required,
-              Validators.pattern("\\d+")
-            ])
+            amount: new FormControl(this.recipe.ingredients[i].amount, [Validators.required, Validators.pattern("\\d+")])
           })
         );
       }
@@ -51,7 +48,6 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    let isNew = true;
     this.subscription = this.route.params.subscribe(
       (params: any) => {
         if(params.hasOwnProperty('id')){
@@ -60,15 +56,16 @@ export class RecipeEditComponent implements OnInit, OnDestroy {
           this.recipe = this.recipeService.getRecipe(this.recipeIndex);
         }
         else{
-          this.isNew = false;
+          this.isNew = true;
+          this.recipe = null;
         }
         this.initForm();
-        console.log(isNew);
       }
     );
   }
 
   ngOnDestroy(){
     this.subscription.unsubscribe();
+    console.log("here");
   }
 }
