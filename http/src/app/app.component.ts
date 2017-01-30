@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {HttpService} from "./http.service";
 import {Subscription} from "rxjs";
 import {Response} from "@angular/http";
@@ -8,14 +8,14 @@ import {Response} from "@angular/http";
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  subs: Subscription;
 
   constructor(private http: HttpService){
   }
 
-  ngOnInit(){
-    this.subs = this.http.getData().subscribe(
-      (data: Response) => console.log(data)
+  onSubmit(username: string, email: string){
+    this.http.sendData({username: username, email: email}).subscribe(
+      data => console.log(data)
     );
   }
+
 }
