@@ -9,13 +9,15 @@ import {Response} from "@angular/http";
 })
 export class AppComponent {
   items: any[] = [];
+  asyncString = this.http.getData();
 
   constructor(private http: HttpService){
   }
 
   onSubmit(username: string, email: string){
     this.http.sendData({username: username, email: email}).subscribe(
-      data => console.log(data)
+      data => console.log(data),
+      error => console.log(error)
     );
   }
 
@@ -24,7 +26,7 @@ export class AppComponent {
       data => {
         const array = []
         for(let key in data) {
-          array.push(key);
+          array.push(data[key]);
         }
         this.items = array;
       }
