@@ -1,3 +1,10 @@
-login-panel{
+.login-panel {
   background-color: #2196f3;
+  color: #fff;
+  padding-top: 15px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
+
+
