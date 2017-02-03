@@ -1,10 +1,18 @@
-.login-panel {
+.login-container {
   background-color: #2196f3;
+  width: 30%;
   color: #fff;
-  padding-top: 15px;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+  margin: 0 auto;
 }
 
+input[type="text"], input[type="password"]{
+  border: none;
+}
+
+.users-btn-default{
+  background-color: #64b5f6;
+  border: none;
+  padding: 8px 18px;
+  margin: 0 auto;
+}
 
