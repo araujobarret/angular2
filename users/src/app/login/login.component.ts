@@ -22,8 +22,10 @@ export class LoginComponent implements OnInit {
 
   onSubmit(){
     // Se não for cadastro novo efetua o SignIn
-    if(!this.isSignUp)
-      console.log("a implementar");
+    if(!this.isSignUp){
+      this.auth.signIn(this.formLogin.value);
+      console.log("It works!");
+    }
     else
       this.auth.signUp(this.formLogin.value);
 
