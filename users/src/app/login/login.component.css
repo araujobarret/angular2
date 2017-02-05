@@ -32,20 +32,3 @@ input[type="text"], input[type="password"]{
   padding: 8px 18px;
   margin: 10px 0px 20px 0px;
 }
-
-.teste{
-  background-color: aquamarine;
-  padding-top: 15%;
-}
-
-.preto{
-  background-color: black;
-}
-
-.azulinar{
-  background-color: blue;
-}
-
-.bloco{
-  margin: auto 0;
-}

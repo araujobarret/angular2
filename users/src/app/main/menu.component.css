@@ -1,0 +1,14 @@
+.navbar{
+  background-color: #2196f3;
+  color: #ffffff;
+  border: none;
+  border-radius: 0;
+}
+
+.navbar-nav > li > a, .navbar-header > a{
+  color: white;
+}
+
+li.active > a {
+  background-color: #64b5f6;
+}
