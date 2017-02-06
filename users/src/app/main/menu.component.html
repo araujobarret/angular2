@@ -8,8 +8,8 @@
       <li><a href="#">Jogo 1</a></li>
       <li><a href="#">Jogo 2</a></li>
     </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">Logout</a></li>
+    <ul class="nav navbar-nav navbar-right" *ngIf="isIn()">
+      <li><a (click)="onLogout()">Logout</a></li>
     </ul>
   </div>
 </nav>
