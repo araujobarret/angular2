@@ -1,0 +1,20 @@
+<ion-navbar *navbar>
+  <ion-title>
+    Workout Detail
+  </ion-title>
+</ion-navbar>
+
+<ion-content padding class="workout-detail">
+  <ion-card>
+    <ion-card-header>
+      <strong>{{workout.title}}</strong>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Type: </strong>{{workout.type}}</p>
+      <hr>
+      {{workout.note}}
+      <br><br><br>
+      <button ion-button full color="danger">Delete Workout</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

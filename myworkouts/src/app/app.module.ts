@@ -9,6 +9,7 @@ import {AddWorkoutPage} from "../pages/add-workout/add-workout";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {WorkoutService} from "./services/workout.service";
+import {WorkoutDetailPage} from "../pages/workout-details/workout-details";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {WorkoutService} from "./services/workout.service";
     AboutPage,
     TabsPage,
     WorkoutsPage,
-    AddWorkoutPage
+    AddWorkoutPage,
+    WorkoutDetailPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -27,7 +29,8 @@ import {WorkoutService} from "./services/workout.service";
     AboutPage,
     TabsPage,
     WorkoutsPage,
-    AddWorkoutPage
+    AddWorkoutPage,
+    WorkoutDetailPage
   ],
   providers: [
     StatusBar,
