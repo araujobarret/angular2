@@ -12,6 +12,11 @@ export class WorkoutsPage implements OnInit {
   workouts: any[];
 
   constructor(public navCtrl: NavController, private _workoutService: WorkoutService, private _navParams: NavParams) {
+    this._workoutService.getWorkouts().subscribe(
+      (data) => {
+        this.workouts = data;
+      }
+    );
   }
 
   ngOnInit(){
