@@ -13,12 +13,17 @@
 
   <ion-item>
     <ion-label floating>Search a Pokemon</ion-label>
-    <ion-input type="text" value=""></ion-input>
+    <ion-input type="text" name="search" [(ngModel)]="search" (keyup)="searchPokemon(search)"></ion-input>
   </ion-item>
 
-  <div>
-
-  </div>
+  <ion-list *ngIf="pokemon">
+    <ion-item>
+      <ion-avatar item-left>
+        <img [src]=pokemon.image alt="">
+      </ion-avatar>
+      <h2>{{pokemon.name}}</h2>
+    </ion-item>
+  </ion-list>
 
 </ion-list>
 

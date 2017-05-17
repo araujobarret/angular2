@@ -12,4 +12,9 @@ export class ApiService{
       .map(response => response.json());
   }
 
+  getPokemonImage(url: string){
+    return this._http.get(url)
+      .map(response =>response.json())
+  }
+
 }
